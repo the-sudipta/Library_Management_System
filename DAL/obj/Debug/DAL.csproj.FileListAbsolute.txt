@@ -1,0 +1,17 @@
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\bin\Debug\DAL.dll.config
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\bin\Debug\DAL.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\bin\Debug\DAL.pdb
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\bin\Debug\EntityFramework.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\bin\Debug\EntityFramework.xml
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.csproj.Up2Date
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.pdb
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.Migrations.Creating_User_table.resources
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.Migrations.Creating_Book_table.resources
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.Migrations.Stablishing_One_to_Many_relation_between_User_to_Book_table.resources
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\DAL\obj\Debug\DAL.Migrations.Add_data_into_database.resources

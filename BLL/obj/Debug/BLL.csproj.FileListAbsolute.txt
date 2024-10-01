@@ -1,0 +1,14 @@
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\BLL.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\BLL.pdb
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\DAL.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\DAL.pdb
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\DAL.dll.config
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\obj\Debug\BLL.csproj.Up2Date
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\obj\Debug\BLL.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\obj\Debug\BLL.pdb
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\EntityFramework.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\EntityFramework.xml
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\AutoMapper.dll
+E:\Yaarian\PROGRAMING\.NET\Library_Management_System\Library_Management_System\BLL\bin\Debug\AutoMapper.xml

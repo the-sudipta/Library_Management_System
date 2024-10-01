@@ -1,0 +1,1597 @@
+{
+	"info": {
+		"_postman_id": "24b644e0-6688-4fab-b14b-9d03d42be231",
+		"name": "Library Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20325646",
+		"_collection_link": "https://orange-meadow-777732.postman.co/workspace/HR-Management-System~337e8eed-8ee7-4f23-9535-fa76c3658e99/collection/20325646-24b644e0-6688-4fab-b14b-9d03d42be231?action=share&source=collection_link&creator=20325646"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "3",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/user/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all users example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44340/api/user/all",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXHVzZXJcYWxs?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 12:20:01 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"ID\": 1,\n        \"Email\": \"test1@gmail.com\",\n        \"Password\": \"admin\",\n        \"Role\": \"Admin\"\n    }\n]"
+						},
+						{
+							"name": "Get All Users Example : Un-Authorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "3",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:44340/api/user/all",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXHVzZXJcYWxs?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:44:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Only Admin can request this api\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Own Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/user/profile",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Own Profile Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:44340/api/user/profile",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"user",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXHVzZXJccHJvZmlsZQ==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 07:18:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": 1,\n    \"Email\": \"test1@gmail.com\",\n    \"Password\": \"admin\",\n    \"Role\": \"Admin\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\" : \"test1@gmail.com\",\r\n    \"Password\" : \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/user/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\" : \"test1@gmail.com\",\r\n    \"Password\" : \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/user/login",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXHVzZXJcbG9naW4=?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 07:15:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Login successful\",\n    \"Token\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\" : \"test3@gmail.com\",\r\n    \"Password\" : \"test\",\r\n    \"Role\" : \"User\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/user/signup",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\" : \"test2@gmail.com\",\r\n    \"Password\" : \"admin\",\r\n    \"Role\" : \"Admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/user/signup",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXHVzZXJcc2lnbnVw?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 08:20:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Signup successful\"\n}"
+						},
+						{
+							"name": "Signup Example : User Exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\" : \"test2@gmail.com\",\r\n    \"Password\" : \"admin\",\r\n    \"Role\" : \"Admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/user/signup",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXHVzZXJcc2lnbnVw?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 10:18:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"User already exists\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/book/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"book",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Books Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:44340/api/book/all",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcYWxs?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 10:19:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1345"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"ID\": 1,\n        \"Title\": \"The Great Gatsby\",\n        \"Author\": \"F. Scott Fitzgerald\",\n        \"Genre\": \"Classic\",\n        \"Publication_Date\": \"1925-04-10T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 2,\n        \"Title\": \"To Kill a Mockingbird\",\n        \"Author\": \"Harper Lee\",\n        \"Genre\": \"Fiction\",\n        \"Publication_Date\": \"1960-07-11T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 3,\n        \"Title\": \"1984\",\n        \"Author\": \"George Orwell\",\n        \"Genre\": \"Dystopian\",\n        \"Publication_Date\": \"1949-06-08T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 4,\n        \"Title\": \"Pride and Prejudice\",\n        \"Author\": \"Jane Austen\",\n        \"Genre\": \"Romance\",\n        \"Publication_Date\": \"1813-01-28T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 5,\n        \"Title\": \"The Catcher in the Rye\",\n        \"Author\": \"J.D. Salinger\",\n        \"Genre\": \"Fiction\",\n        \"Publication_Date\": \"1951-07-16T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 6,\n        \"Title\": \"Moby-Dane\",\n        \"Author\": \"Herman Melville\",\n        \"Genre\": \"Adventure\",\n        \"Publication_Date\": \"1851-11-14T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 7,\n        \"Title\": \"The Lord of the Rings\",\n        \"Author\": \"J.R.R. Tolkien\",\n        \"Genre\": \"Fantasy\",\n        \"Publication_Date\": \"1954-07-29T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 8,\n        \"Title\": \"The Hobbit\",\n        \"Author\": \"J.R.R. Tolkien\",\n        \"Genre\": \"Fantasy\",\n        \"Publication_Date\": \"1937-09-21T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 9,\n        \"Title\": \"War and Peace\",\n        \"Author\": \"Leo Tolstoy\",\n        \"Genre\": \"Historical\",\n        \"Publication_Date\": \"1869-01-01T00:00:00\",\n        \"User_ID\": 1\n    },\n    {\n        \"ID\": 10,\n        \"Title\": \"Crime and Punishment\",\n        \"Author\": \"Fyodor Dostoevsky\",\n        \"Genre\": \"Psychological Fiction\",\n        \"Publication_Date\": \"1866-01-01T00:00:00\",\n        \"User_ID\": 1\n    }\n]"
+						},
+						{
+							"name": "Get All Books Example : Token Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "1",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://localhost:44340/api/book/all",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"all"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcYWxs?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 10:20:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Token Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44340/api/book/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Book By ID Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44340/api/book/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcMQ==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 10:23:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "137"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": 1,\n    \"Title\": \"The Great Gatsby\",\n    \"Author\": \"F. Scott Fitzgerald\",\n    \"Genre\": \"Classic\",\n    \"Publication_Date\": \"1925-04-10T00:00:00\",\n    \"User_ID\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Book by Author or Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44340/api/book/search/Author 1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"book",
+								"search",
+								"Author 1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Book by Author or Title Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44340/api/book/search/George Orwell",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"search",
+										"George Orwell"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcc2VhcmNoXEdlb3JnZSBPcndlbGw=?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 10:27:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "123"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"ID\": 3,\n        \"Title\": \"1984\",\n        \"Author\": \"George Orwell\",\n        \"Genre\": \"Dystopian\",\n        \"Publication_Date\": \"1949-06-08T00:00:00\",\n        \"User_ID\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create New Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\": \"Title 4\",\r\n    \"Author\": \"Author 1\",\r\n    \"Genre\": \"Fiction\",\r\n    \"Publication_Date\": \"2023-01-01\",\r\n    \"User_ID\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/book/new",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"book",
+								"new"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create New Book Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Title\": \"Title 1\",\r\n    \"Author\": \"Author 1\",\r\n    \"Genre\": \"Fiction\",\r\n    \"Publication_Date\": \"2023-01-01\",\r\n    \"User_ID\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/book/new",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"new"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcbmV3?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:16:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Book added successfully\"\n}"
+						},
+						{
+							"name": "Create New Book Example : Token Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Title\": \"Title 1\",\r\n    \"Author\": \"Author 1\",\r\n    \"Genre\": \"Fiction\",\r\n    \"Publication_Date\": \"2023-01-01\",\r\n    \"User_ID\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/book/new",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"new"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcbmV3?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:17:05 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Token Not Found\"\n}"
+						},
+						{
+							"name": "Create New Book Example : Book Already Exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Title\": \"Title 1\",\r\n    \"Author\": \"Author 1\",\r\n    \"Genre\": \"Fiction\",\r\n    \"Publication_Date\": \"2023-01-01\",\r\n    \"User_ID\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/book/new",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"new"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcbmV3?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:17:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Book already exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Existing Book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\": 11,\r\n    \"Title\": \"Title 1\",\r\n    \"Author\": \"Author 1\",\r\n    \"Genre\": \"Non-Fiction\",\r\n    \"Publication_Date\": \"2023-01-01\",\r\n    \"User_ID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/book/update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"book",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Existing Book Example",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ID\": 11,\r\n    \"Title\": \"Title 1\",\r\n    \"Author\": \"Author 1\",\r\n    \"Genre\": \"Non-Fiction\",\r\n    \"Publication_Date\": \"2023-01-01\",\r\n    \"User_ID\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/book/update",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcdXBkYXRl?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:22:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": 11,\n    \"Title\": \"Title 1\",\n    \"Author\": \"Author 1\",\n    \"Genre\": \"Non-Fiction\",\n    \"Publication_Date\": \"2023-01-01T00:00:00\",\n    \"User_ID\": 2\n}"
+						},
+						{
+							"name": "Update Existing Book Example : Un-Authorized Access",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "3",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ID\": 11,\r\n    \"Title\": \"Title 1\",\r\n    \"Author\": \"Author 1\",\r\n    \"Genre\": \"Non-Fiction\",\r\n    \"Publication_Date\": \"2023-01-01\",\r\n    \"User_ID\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44340/api/book/update",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"update"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcdXBkYXRl?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:28:05 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"You do not have any rights to change the book information\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/book/delete/13",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"book",
+								"delete",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Book Example : Un-Authorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "3",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:44340/api/book/delete/13",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"delete",
+										"13"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcZGVsZXRlXDEz?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:41:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"You do not have any rights to delete the book\"\n}"
+						},
+						{
+							"name": "Delete Book Example",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:44340/api/book/delete/13",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44340",
+									"path": [
+										"api",
+										"book",
+										"delete",
+										"13"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?RTpcWWFhcmlhblxQUk9HUkFNSU5HXC5ORVRcTGlicmFyeV9NYW5hZ2VtZW50X1N5c3RlbVxMaWJyYXJ5X01hbmFnZW1lbnRfU3lzdGVtXExpYnJhcnlfTWFuYWdlbWVudF9TeXN0ZW1cYXBpXGJvb2tcZGVsZXRlXDEz?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Sep 2024 11:42:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Book deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
